@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+html {
+    font-size: 0.65rem;
+    font-family: "Kumbh Sans", sans-serif;
+    text-shadow: #0c0c0c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding:0;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+section{
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.cabecalho {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #050210;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 70px;
+    box-shadow: 0px 10px 40px 3px #0055ff36;
+}
+
+#top-page {
+    background: url(Imagens/Content/ilustracao.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.formulario1 {
+    display: flex;
+    color: white;
+    justify-content: left;
+    flex-direction: column;
+    padding-bottom: 3rem;
+}
+
+.formulario1>h1 {
+    display: flex;
+    font-size: 4rem;
+}
+
+.botao-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-top {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1.5rem 7rem;
+    margin-right: 2rem;
+    border-radius: .5rem;
+    background-color: #0057FF;
+    
+}
+
+.button-top:hover{
+    cursor: pointer;
+    box-shadow: 0px 10px 40px 3px #0055ff36;
+    transition: all 0.2s ease;
+}
+
+#legenda {
+    color: #7E7E7E;
+    font-size: 1.3rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.nav-links a {
+    color: #5F5F5F;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content {
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    background-color: #0F0E15;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 0.75rem 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 1px;
+    background: #fff;
+    margin: 4px;
+}
+
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position:fixed;
+    text-align: center;
+    background: #050210;
+    color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        background: #0F0E15;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links li a {
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        left: 0;
+        top: 70px;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
